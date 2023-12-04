@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "echo \"ERROR: no test specified\" && exit 1",
+    "start": "node 22Nov23.js",
+    "dev": "nodemon 22Nov23.js"
+  },
+  "dependencies": {
+    "3": "^2.1.0",
+    "bcrypt": "^5.1.1",
+    "decrypt": "^0.0.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.6"
+  }
+}
