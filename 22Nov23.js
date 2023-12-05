@@ -127,7 +127,14 @@ app.delete("/books/:bookId/", async(req,res)=>{
 
 app.get("/books/:bookId/",async(req,res)=>{
     const {bookId} = req.params;
-    const getAuthorQuery = `SELECT * FROM book WHERE book_id = ${bookId};`;
-    const booksArray = await db.all(getAuthorQuery);
+    const getBooksQuery = `SELECT * FROM book WHERE book_id = ${bookId};`;
+    const booksArray = await db.all(getBooksQuery);
     res.send(booksArray);
+})
+
+app.get("/authors/:authorId/",async(req,res)=>{
+    const {authorId} = req.params;
+    const getAuthorQuery = `SELECT * FROM author WHERE author_id = ${authorId};`;
+    const authorArray = await db.all(getAuthorQuery);
+    res.send(authorArray);
 })
